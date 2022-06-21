@@ -32,3 +32,26 @@ print(len(my_list))
 
 
 
+# 切片
+# 切片是指从现有的列表中获取一个子列表的操作
+# 语法：列表[起始:结束]
+#   通过切片获取元素时，会包括指定的起始位置元素，但不包括结束位置的元素
+#   做切片操作时，总会返回一个新的列表，不会影响原有的列表
+#   起始和结束位置的索引都可以省略不写
+#   若省略起始位置，则会从第一个元素开始截取
+#   若省略结束位置，则会从起始位置一直截取到最后
+students = ['xiaoming', 'xiaohong', 'yuxing', 'damocles', 'zhangsan']
+newStu = students[1:3]
+print(newStu) # ['xiaohong', 'yuxing']
+
+print(students[1:]) # ['xiaohong', 'yuxing', 'damocles', 'zhangsan']
+print(students[:4]) # ['xiaoming', 'xiaohong', 'yuxing', 'damocles']
+print(students[:]) # ['xiaoming', 'xiaohong', 'yuxing', 'damocles', 'zhangsan']
+print(students[-1:]) # ['zhangsan']
+
+# 切边支持指定截取时的步长
+# 语法：[起始:结束:步长]， 默认步长为1
+print(students[1:4:1]) # ['xiaohong', 'yuxing', 'damocles']
+print(students[1:4:2]) # ['xiaohong', 'damocles']
+# 若步长为负数时，会从后往前截取
+print(students[::-1]) # ['zhangsan', 'damocles', 'yuxing', 'xiaohong', 'xiaoming']
