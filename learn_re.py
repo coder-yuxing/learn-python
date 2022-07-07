@@ -39,7 +39,9 @@ a_html = """
 <div class='hh' id='3'><span>韩红</span></div>
 <div class='tge' id='4'><span>腾格尔</span></div>
 """
-regex = re.compile(r"<div class='(?P<class>.*?)' id='(?P<id>.*?)'><span>(?P<name>.*?)</span></div>", re.S)
+regex = re.compile(r"<div class='(?P<class>.*?)' id='(?P<id>.*?)'>"
+                   r"<span>(?P<name>.*?)</span></div>",
+                   re.S)
 context = regex.finditer(a_html)
 for i in context:
     print(i.group())
