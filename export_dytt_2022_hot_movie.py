@@ -60,8 +60,6 @@ for it in regex_finditer:
             r'.*?◎导　　演(?P<director>.*?)<br />'
             r'.*?<div id="downlist".*?style.*?>(?P<download_list>.*?)</div>',
             re.S)
-    # r'\\@片 名(?P<movie_name>.*?)".*?\\@年 代(?P<movie_year>.*?)".*?'
-    # r'\\@类 别(?P<movie_category>.*?)"\\@导 演(?P<movie_director>.*?)".*?',
     movie_context = regex.search(resp.text)
     thumbnail = movie_context.group('thumbnail')
     name = movie_context.group('name')
