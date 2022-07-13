@@ -3,7 +3,7 @@ import io
 import openpyxl
 from openpyxl_image_loader import SheetImageLoader
 
-workbook = openpyxl.load_workbook('test.xlsx')
+workbook = openpyxl.load_workbook('temp/test.xlsx')
 
 print(workbook.sheetnames)
 for sheet in workbook:
